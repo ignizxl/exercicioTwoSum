@@ -1,8 +1,13 @@
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++){
-            for (int j = i + 1; j < nums.length; j++){
 
+        //a lógica aqui é a seguinte.
+        //cria um laço para pegar o primeiro elemento vetor
+        for (int i = 0; i < nums.length; i++){
+            //e outro laço for para 'varrer' cada elemento depois do primeiro elemento vetor
+            for (int j = i + 1; j < nums.length; j++){
+                //e a cada iteração faz a verificação se a soma dos elementos que estão sendo comparados é igual ao target,
+                //e se for igual o target, retorna os indices
                 if (nums[i] + nums[j] == target){
                     return new int[]{i, j};
                 }
@@ -11,6 +16,7 @@ public class Solution {
         return nums;
     }
 }
+
 
 /**
 
